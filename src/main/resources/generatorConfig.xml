@@ -20,7 +20,7 @@
 
 <!-- 		jdbc连接 -->
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://127.0.0.1:3306/user"
+			connectionURL="jdbc:mysql://127.0.0.1:3306/krwcs"
 			userId="root" password="admin" />
 
 <!-- 		类型转换 -->
@@ -47,7 +47,7 @@
 		</javaClientGenerator>
 
 
-         <table schema="user" tableName="orderinfo" domainObjectName="OrderInfoRead"
+         <table schema="krwcs" tableName="sys_pri_operator" domainObjectName="SysPriOperatorRead"
 
 
 			enableInsert="false"
@@ -71,7 +71,7 @@
 
 		<!-- jdbc连接 -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://127.0.0.1:3306/user"
+                        connectionURL="jdbc:mysql://127.0.0.1:3306/krwcs"
                         userId="root" password="admin" />
 
 		<!-- 类型转换 -->
@@ -97,7 +97,7 @@
 			<property name="enableSubPackages" value="false" />
 		</javaClientGenerator>
 
-   		<table schema="user" tableName="orderinfo" domainObjectName="OrderInfoWrite"
+   		<table schema="krwcs" tableName="sys_pri_operator" domainObjectName="SysPriOperatorWrite"
   			enableInsert="true"
 			enableDeleteByPrimaryKey="true"
 			enableUpdateByPrimaryKey="true"
