@@ -17,15 +17,12 @@ import com.dooool.OrderServer.common.exception.SystemException;
 import com.dooool.OrderServer.common.exception.ModuleEnum;
 
 
-
-
 import com.dooool.OrderServer.common.utils.PropertyUtils;
 import lombok.Data;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import com.google.common.base.Strings;
-
 
 
 /**
@@ -84,7 +81,7 @@ public class MonitorAOP {
             // 执行业务代码
             result = point.proceed();
         } catch (Exception e) {
-            result = handlerException( e);
+            result = handlerException(e);
         } finally {
             //t.complete();
         }
@@ -97,12 +94,12 @@ public class MonitorAOP {
         if (e instanceof BusinessException) {
             BusinessException be = (BusinessException) e;
             be.getMessage();
-            if(be.getModuleNo() == null) {
+            if (be.getModuleNo() == null) {
                 be.wrapModule(ModuleEnum.getModuleByNo(moduleNo));
             }
-            return  new Response(be.getMessage(), be.getStatus(), be.getData());
+            return new Response(be.getMessage(), be.getStatus(), be.getData());
         } else {
-            SystemException se = e instanceof SystemException ? (SystemException)e : new SystemException(e);
+            SystemException se = e instanceof SystemException ? (SystemException) e : new SystemException(e);
             if (se.getModuleNo() == null) {
                 se.wrapModule(ModuleEnum.getModuleByNo(moduleNo));
             }
