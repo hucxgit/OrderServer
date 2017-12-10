@@ -5,7 +5,7 @@
 	<!-- <properties resource="./init.properties" /> -->
 
 	<!-- 指定数据连接驱动jar地址 -->
- 	<classPathEntry location="/Users/hucx/hucxwork/soft_install_path/localRepository/mysql/mysql-connector-java/5.1.31/mysql-connector-java-5.1.31.jar" />
+ 	<classPathEntry location="C:/Users/user/.m2/repository/mysql/mysql-connector-java/5.1.31/mysql-connector-java-5.1.31.jar" />
 
 
 
@@ -21,7 +21,7 @@
 <!-- 		jdbc连接 -->
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
 			connectionURL="jdbc:mysql://127.0.0.1:3306/user"
-			userId="root" password="123456" />
+			userId="root" password="admin" />
 
 <!-- 		类型转换 -->
 		<javaTypeResolver>
@@ -72,7 +72,7 @@
 		<!-- jdbc连接 -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
                         connectionURL="jdbc:mysql://127.0.0.1:3306/user"
-                        userId="root" password="123456" />
+                        userId="root" password="admin" />
 
 		<!-- 类型转换 -->
 		<javaTypeResolver>
